@@ -1,4 +1,4 @@
-# dictionary
+# Dictionary
 Chrome Extension for word lookup
 
 Steps to unpack ->
