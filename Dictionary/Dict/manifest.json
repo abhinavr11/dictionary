@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Dictionary",
+  "version": "0.1.4",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"],
+      "persistent": true
+    }
+  ],
+ 
+  "background": {
+    "scripts": ["background.js"],
+    "permissions": [
+      "tabs",
+      "http://*/",
+      "https://*/"
+  ]
+  },
+  "browser_action": {
+    "default_icon": "ct.png",
+    "default_popup": "sketch/index.html",
+    "default_title": "Lookup a definition!"
+  },
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+}
